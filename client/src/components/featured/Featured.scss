@@ -1,0 +1,60 @@
+.featured{
+    position: relative;
+    height: 90vh;
+
+    .category{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        select{
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // not stretchy with cover fit
+    }
+
+    .info{
+        color: black;
+        width: 35%;
+        position: absolute;
+        left: 50px;
+        bottom: 5px;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 200px;
+            height: 70px;
+            border-radius: 10px;
+        }
+        .desc{
+            margin: 7px 0px;
+        }
+
+        .buttons{
+            display: flex;
+
+            button{
+                padding: 5px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                cursor: pointer;
+                font-weight: 700;
+            }
+        }
+    }
+}

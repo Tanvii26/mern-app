@@ -1,0 +1,71 @@
+.navbar{
+    width: 100%; //adjust spacing 
+    color: white;
+    font-size: 14px;
+    position: fixed; // on top even on scroll
+    top: 0;
+    z-index: 999; // jiski jitni jyada z index vo sabke upar than one with less z index
+
+    background: linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3) 50%); //navbar ka gradient shift bottom me transparent to top me opaque
+    // real time effect: scroll pr changes to black bg when 50% scrolled top pe fir gradient shift {useState ke thru} 
+
+    &.scrolled{
+        background-color: var(--main-color);
+    }
+    .container{
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left{
+            display: flex;
+            align-items: center;
+            img{
+                height: 25px;
+                margin-right: 40px;
+                padding-left: 0px;
+            }
+            span{
+                cursor: pointer;
+                margin-right: 20px;
+            }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+            img{
+                cursor: pointer;
+                width: 25px;
+                height: 30px;
+                border-radius: 50px;
+                object-fit: cover;
+            }
+            .icon{
+                margin: 0 15px;
+                cursor: pointer;
+            }
+
+            .profile{
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                }
+                span{
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
